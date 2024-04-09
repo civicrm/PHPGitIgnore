@@ -14,5 +14,13 @@ make
 If you don't have GNU Make and PHP, then you can use `nix-shell`, eg
 
 ```bash
-nix-shell --run make
+## Run the tests with specific PHP
+nix-shell -A php82 --run make
+
+## Run the tests with multiple versions of PHP
+nix-shell -A php74 --run 'make clean run-unit-tests'
+nix-shell -A php81 --run 'make clean run-unit-tests'
+nix-shell -A php82 --run 'make clean run-unit-tests'
+nix-shell -A php83 --run 'make clean run-unit-tests'
+## (Each phpXX should be listed in shell.nix)
 ```
