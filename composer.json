@@ -1,7 +1,10 @@
 {
-	"name": "togos/gitignore",
+	"name": "civicrm/gitignore",
 	"description": "Parser for .gitignore (and sparse-checkout, and anything else using the same format) files",
 	"license": "MIT",
+	"replace": {
+		"togos/gitignore": "1.*"
+	},
 
 	"require": {
 		"php": ">=5.2"
